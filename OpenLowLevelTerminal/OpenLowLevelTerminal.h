@@ -4,5 +4,5 @@
 class LLTerminal {
 
 public:
-	void set_console_title()
+	void set_console_title();
 };

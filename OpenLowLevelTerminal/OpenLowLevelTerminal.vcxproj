@@ -132,8 +132,8 @@
     <ClCompile Include="OpenLowLevelTerminal.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Platforms.h" />
     <ClInclude Include="OpenLowLevelTerminal.h" />
-    <ClInclude Include="TerminalFormatter.h" />
     <ClInclude Include="TerminalStyles.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

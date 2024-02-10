@@ -19,17 +19,17 @@ namespace OLLT {
 		};
 
 		template <Tools::Platforms platform>
-		struct Coord_ final {
+		class Coord_ final {
 
 		};
 
 		template <Tools::Platforms platform>
-		struct Font_ final {
+		class Font_ final {
 
 		};
 
 		template <Tools::Platforms platform>
-		struct Size_ final {
+		class Size_ final {
 
 		};
 
@@ -57,8 +57,12 @@ namespace OLLT {
 		};
 
 		template <>
-		struct Coord_<Tools::Platforms::Windows> final {
-			int x, y;
+		class Coord_<Tools::Platforms::Windows> final {
+			COORD coords;
+		public:
+			const COORD get_coords() const {
+				return coords;
+			}
 		};
 
 		template <>
@@ -73,8 +77,12 @@ namespace OLLT {
 		};
 
 		template <>
-		struct Size_<Tools::Platforms::Windows> final {
-			int width, height;
+		class Size_<Tools::Platforms::Windows> final {
+			COORD size;
+		public:
+			const COORD get_size() const {
+				return size;
+			}
 		};
 
 		// win usings

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Platforms.h"
+#include "Tools.h"
 
 #ifdef _WIN32
 #include <wincon.h>
@@ -12,17 +12,17 @@ namespace OLLT {
 
 // main templates
 		// foreground colors
-		template <OLLT::Platforms platform>
+		template <OLLT::Tools::Platforms platform>
 		struct FColors_ final {
 
 		};
 		// background colors
-		template <OLLT::Platforms platform>
+		template <OLLT::Tools::Platforms platform>
 		struct BColors_ final {
 
 		};
 		// font styles (bold, underline, reverse ... etc.)
-		template <OLLT::Platforms platform>
+		template <OLLT::Tools::Platforms platform>
 		struct FStyles_ final {
 
 		};
@@ -30,7 +30,7 @@ namespace OLLT {
 #ifdef _WIN32
 
 		// foreground windows spec
-		template<> struct FColors_<OLLT::Platforms::Windows> final {
+		template<> struct FColors_<OLLT::Tools::Platforms::Windows> final {
 			static constexpr auto Red = FOREGROUND_RED;
 			static constexpr auto Blue = FOREGROUND_BLUE;
 			static constexpr auto Green = FOREGROUND_GREEN;
@@ -38,7 +38,7 @@ namespace OLLT {
 		};
 		
 		// background windows spec
-		template<> struct BColors_<OLLT::Platforms::Windows> final {
+		template<> struct BColors_<OLLT::Tools::Platforms::Windows> final {
 			static constexpr auto Red = BACKGROUND_RED;
 			static constexpr auto Blue = BACKGROUND_BLUE;
 			static constexpr auto Green = BACKGROUND_GREEN;
@@ -46,7 +46,7 @@ namespace OLLT {
 		};
 
 		// font styles windows spec
-		template<> struct FStyles_<OLLT::Platforms::Windows> final {
+		template<> struct FStyles_<OLLT::Tools::Platforms::Windows> final {
 			static constexpr auto Underline = COMMON_LVB_UNDERSCORE;
 			static constexpr auto Reverse_colors = COMMON_LVB_REVERSE_VIDEO;
 			static constexpr auto Italic = COMMON_LVB_GRID_LVERTICAL;
@@ -54,9 +54,9 @@ namespace OLLT {
 		};
 
 		// windows usings
-		using FColors = FColors_<OLLT::Platforms::Windows>;
-		using BColors = BColors_<OLLT::Platforms::Windows>;
-		using FStyles = FStyles_<OLLT::Platforms::Windows>;
+		using FColors = FColors_<OLLT::Tools::Platforms::Windows>;
+		using BColors = BColors_<OLLT::Tools::Platforms::Windows>;
+		using FStyles = FStyles_<OLLT::Tools::Platforms::Windows>;
 #endif
 	}
 

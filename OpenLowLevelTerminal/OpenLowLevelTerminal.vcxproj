@@ -132,7 +132,7 @@
     <ClCompile Include="OpenLowLevelTerminal.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Platforms.h" />
+    <ClInclude Include="Tools.h" />
     <ClInclude Include="OpenLowLevelTerminal.h" />
     <ClInclude Include="TerminalStyles.h" />
   </ItemGroup>

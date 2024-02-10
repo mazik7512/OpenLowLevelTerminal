@@ -26,7 +26,7 @@
     <ClInclude Include="TerminalStyles.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Platforms.h">
+    <ClInclude Include="Tools.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
